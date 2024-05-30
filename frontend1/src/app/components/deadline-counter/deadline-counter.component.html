@@ -1,0 +1,7 @@
+<div>
+    <h2>Deadline date: {{ deadline | date: 'medium' }}</h2>
+    <h2>Current time: {{ currentTime | date: 'medium' }}</h2>
+    <h1 [ngStyle]="{'color':secondsLeft<59?'red': 'yellow'}">Seconds left to deadline: {{ secondsLeft }}</h1>
+    <h2>Minutes left to deadline: {{ (secondsLeft/60).toFixed(3) }}</h2>
+    <h2>Hours left to deadline: {{ (secondsLeft/60/60).toFixed(3) }}</h2>
+</div>
